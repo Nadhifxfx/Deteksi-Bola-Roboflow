@@ -56,4 +56,5 @@ plt.show()
 
 ```
 **Output :** <br>
-load](https://github.com/user-attachments/assets/43e1ee1e-a185-48dd-b2ca-b3826b249068)
+![download (1)](https://github.com/user-attachments/assets/05575278-8b49-477c-ab21-edb61e8e284b)
+
