@@ -26,10 +26,8 @@ dataset_location = dataset.location  # dari RoboFlow download
 print("Dataset downloaded to:", dataset_location)
 
 from ultralytics import YOLO
-
 # Buat model YOLOv8 baru
 model = YOLO("yolov8n.pt")  # "yolov8n.pt" adalah versi YOLOv8 Nano
-
 # Jalankan pelatihan dengan dataset
 model.train(data="/content/Ball-auto-dataset-1/data.yaml", epochs=100, imgsz=320)
 
