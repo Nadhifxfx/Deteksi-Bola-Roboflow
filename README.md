@@ -1,4 +1,4 @@
-# Deteksi-Bola-Roboflow
+# Deteksi Bola
 
 **Soal :**
 Project uas deteksi objek dengan roboflow
