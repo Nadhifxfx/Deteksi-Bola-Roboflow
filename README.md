@@ -1,5 +1,12 @@
 # Deteksi-Bola-Roboflow
 
+**Soal :**
+Project uas deteksi objek dengan roboflow
+1. tentukan objek yang akan di deteksi (cth : koin, piring, pensil)
+2. siapkan minimal 80 gambar
+3. model yang sudah di buat pada roboflow, gunakan pada google collab
+4. tunjukkan hasil deteksi dengan gambar baru pada google collab
+
  # Jawaban
 
 ```python
@@ -28,6 +35,7 @@ print("Dataset downloaded to:", dataset_location)
 from ultralytics import YOLO
 # Buat model YOLOv8 baru
 model = YOLO("yolov8n.pt")  # "yolov8n.pt" adalah versi YOLOv8 Nano
+
 # Jalankan pelatihan dengan dataset
 model.train(data="/content/Ball-auto-dataset-1/data.yaml", epochs=100, imgsz=320)
 
