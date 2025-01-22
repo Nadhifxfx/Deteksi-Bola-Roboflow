@@ -55,5 +55,5 @@ plt.axis("off")
 plt.show()
 
 ```
-**Output :**
-![download](https://github.com/user-attachments/assets/43e1ee1e-a185-48dd-b2ca-b3826b249068)
+**Output :** <br>
+load](https://github.com/user-attachments/assets/43e1ee1e-a185-48dd-b2ca-b3826b249068)
