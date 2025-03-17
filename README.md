@@ -66,10 +66,10 @@ for file_name in uploaded.keys():
       print(f"Hasil deteksi disimpan di: {output_image_path}")
 
     img = PILImage.open(output_image_path)
-    img_resized = img.resize((int(img.width * 0.5), int(img.height * 0.5)))  # Perkecil ukuran 50%
+    img_resized = img.resize((int(img.width * 0.3), int(img.height * 0.3)))  # Perkecil ukuran 50%
     
     display(img_resized)
 
 ```
 **Output :** <br>
-![download (3)](https://github.com/user-attachments/assets/db0d10a7-f33b-4f35-94f1-410e558733c7)
+![download (2)](https://github.com/user-attachments/assets/db037794-66f4-4eab-84d4-3315a120f352)
