@@ -16,6 +16,7 @@ from roboflow import Roboflow
 from ultralytics import YOLO
 from google.colab import files
 from IPython.display import Image, display
+from PIL import Image as PILImage
 import os
 import glob
 
@@ -59,18 +60,17 @@ for file_name in uploaded.keys():
         detected_files = glob.glob(os.path.join(latest_result_dir, "*"))  # Mengambil semua file di dalam folder
         detected_image_files = [f for f in detected_files if f.endswith(('.jpg', '.jpeg', '.png'))]  # Filter hanya gambar
         
-        if detected_image_files:
-            output_image_path = detected_image_files[0]  # Ambil gambar pertama yang ditemukan
-            print(f"Hasil deteksi disimpan di: {output_image_path}")
-            
-            # Tampilkan gambar hasil deteksi
-            display(Image(filename=output_image_path))
-        else:
-            print(f"Tidak ada gambar hasil deteksi di folder {latest_result_dir}.")
-    else:
-        print(f"Tidak ada folder hasil deteksi ditemukan di {result_dir_parent}.")
+        # Menampilkan gambar hasil deteksi dengan ukuran yang diperkecil
+    if detected_image_files:
+      output_image_path = detected_image_files[0]  # Ambil gambar pertama yang ditemukan
+      print(f"Hasil deteksi disimpan di: {output_image_path}")
+
+    img = PILImage.open(output_image_path)
+    img_resized = img.resize((int(img.width * 0.5), int(img.height * 0.5)))  # Perkecil ukuran 50%
+    
+    display(img_resized)
 
 ```
 **Output :** <br>
-![download (6)](https://github.com/user-attachments/assets/9dba3606-e300-4076-86b5-e1968b3850b9)
+![download (2)](https://github.com/user-attachments/assets/056db701-a2c3-49fe-9d6b-05b64c7fe6a5)
 
